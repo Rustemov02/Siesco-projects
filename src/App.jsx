@@ -1,15 +1,13 @@
-import React from 'react'
-import MainComponent from './Cart/Cart.jsx'
-import './styles/main.css'
- 
+import React from "react";
+import Cart from "./Cart/Cart.jsx";
+import "./styles/main.css";
 
 function App() {
-
   return (
-    <div className='flex h-screen items-center justify-center'> 
-      <MainComponent/>
+    <div className="flex h-screen items-center justify-center">
+      <Cart />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
