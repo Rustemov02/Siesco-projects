@@ -1,0 +1,96 @@
+.contain {
+  @apply px-xl lg:px-[130px]
+}
+
+
+.no-scroll {
+	overflow: hidden;
+	height: 100%;
+}
+body, p, h1, h2, h3, h4, h5, h6, span, a, div {
+  color: hsl(var(--Neutral-900));
+}
+
+.text-8 {
+  font-size: 8px;
+  line-height: 12px;
+}
+
+.text-10 {
+  font-size: 8px;
+  line-height: 12px;
+}
+
+.text-12 {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.text-14 {
+  font-size: 14px;
+  line-height: 20px;
+}
+.text-16 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.text-18 {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.text-20 {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.text-24 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.text-28 {
+  font-size: 28px;
+  line-height: 36px;
+}
+
+.text-32 {
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.text-36 {
+  font-size: 36px;
+  line-height: 48px;
+}
+
+.text-40 {
+  font-size: 40px;
+  line-height: 56px;
+}
+
+.text-48 {
+  font-size: 48px;
+  line-height: 64px;
+}
+
+.text-56 {
+  font-size: 56px;
+  line-height: 72px;
+}
+
+.text-64 {
+  font-size: 64px;
+  line-height: 80px;
+}
+
+.text-72 {
+  font-size: 72px;
+  line-height: 92px;
+}
+
+.text-80 {
+  font-size: 80px;
+  line-height: 100px;
+}
