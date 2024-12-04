@@ -1,11 +1,8 @@
 import React from "react";
 
-function Cart() {
-  const jobName = "UX/UI Designer";
-  const company = "Kapital Bank";
-  const location = "Bakı,Azerbaycan";
-  const appearenceCount = 110;
-  const price = 1000;
+function Cart({jobName , company , location , appearenceCount , price}) {
+  
+ 
 
   return (
     <div className="border bg-light sm:w-[348px] w-full flex flex-col justiyf-center items-center gap-lg p-xl rounded-[20px]">
