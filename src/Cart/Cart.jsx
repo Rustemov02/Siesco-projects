@@ -1,8 +1,46 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-function Cart({jobName , company , location , appearenceCount , price}) {
-  
- 
+// type CartProps = {
+//   jobName: string;
+//   company: string;
+//   location: string;
+//   appearenceCount: number;
+//   price: number;
+// };
+
+function Cart(props) {
+  const { jobName, company, location, appearenceCount, price, dateProps } =
+    props;
+  const today = new Date();
+  let differenceBetween;
+  const [typeDate, setTypedate] = useState("gün əvvəl");
+  const [day, setDay] = useState(null);
+
+  useEffect(() => {
+    if (dateProps < today) {
+      //calculate the length between
+      differenceBetween = (
+        (today.getTime() - dateProps.getTime()) /
+        (1000 * 3600 * 24)
+      ) // convert from seconds to the day
+        .toFixed(0);
+
+      if (differenceBetween > 6 && differenceBetween <= 30) {
+        setTypedate("həftə əvvəl");
+        setDay(Math.floor(differenceBetween / 7));
+      } else if (differenceBetween > 30) {
+        setTypedate(null);
+        const formatter = new Intl.DateTimeFormat("en-GB");
+        setTypedate(formatter.format(dateProps));
+      } else {
+        setDay(differenceBetween);
+        setTypedate("gün əvvəl");
+      }
+    } else {
+      setTypedate(null);
+      console.log("Date is wrong !");
+    }
+  }, []);
 
   return (
     <div className="border bg-light sm:w-[348px] w-full flex flex-col justiyf-center items-center gap-lg p-xl rounded-[20px]">
@@ -40,7 +78,7 @@ function Cart({jobName , company , location , appearenceCount , price}) {
         <div className="flex flex-row items-center gap-1">
           <img src={"./public/images/calendar.svg"} className="w-6 h-6" />
           <p className="max-w-[213px] w-full text-neutral-700 text-14 font-medium">
-            2 gün əvvəl
+            {day} {typeDate}
           </p>
         </div>
 
