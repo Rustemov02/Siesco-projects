@@ -10,8 +10,8 @@ function App() {
   const price = 100;
 
   const today = new Date();
-  const daysAgo = new Date(today);
-  daysAgo.setDate(today.getDate() - 2); 
+  const pastDate = new Date(today);
+  pastDate.setDate(today.getDate() - 31); //change date props
 
   return (
     <div className="flex h-screen items-center justify-center">
@@ -21,7 +21,7 @@ function App() {
         location={location}
         appearenceCount={appearenceCount}
         price={price}
-        dateProps={daysAgo}
+        dateProps={pastDate}
       />
     </div>
   );
