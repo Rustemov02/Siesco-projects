@@ -11,7 +11,12 @@ function App() {
 
   const today = new Date();
   const pastDate = new Date(today);
-  pastDate.setDate(today.getDate() - 6); //change date props
+
+  //change date props
+  // pastDate.setDate(today.getDate() - 1); 
+  pastDate.setHours(today.getHours() - 23) 
+  // pastDate.setMinutes(today.getMinutes() - 430 ); // minute
+  // pastDate.setSeconds(today.getSeconds() - 12000); //seconds
 
   return (
     <div className="flex h-screen items-center justify-center">
