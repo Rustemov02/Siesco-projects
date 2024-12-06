@@ -11,7 +11,7 @@ function App() {
 
   const today = new Date();
   const pastDate = new Date(today);
-  pastDate.setDate(today.getDate() - 31); //change date props
+  pastDate.setDate(today.getDate() - 6); //change date props
 
   return (
     <div className="flex h-screen items-center justify-center">

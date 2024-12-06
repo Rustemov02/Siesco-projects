@@ -1,4 +1,4 @@
-export const formatDate = (dateProps) => {
+export const formatDate = (dateProps : Date) : string | null => {
   const today = new Date();
 
   // calculate the length between date
@@ -13,7 +13,7 @@ export const formatDate = (dateProps) => {
   } else if (differenceBetween > 30) {
     const formatter = new Intl.DateTimeFormat("en-GB");
     return formatter.format(dateProps); // return like DD/MM/YYYY
-  } else {
+  } else {  
     return null;
   }
 };

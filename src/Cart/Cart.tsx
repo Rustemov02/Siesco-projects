@@ -1,15 +1,16 @@
 import React from "react";
 import { formatDate } from "../utils/formatDate";
 
-// type CartProps = {
-//   jobName: string;
-//   company: string;
-//   location: string;
-//   appearenceCount: number;
-//   price: number;
-// };
+type CartProps = {
+  jobName: string;
+  company: string;
+  location: string;
+  appearenceCount: number;
+  price: number;
+  dateProps: Date;
+};
 
-function Cart(props) {
+function Cart(props: CartProps) {
   const { jobName, company, location, appearenceCount, price, dateProps } =
     props;
 
@@ -49,7 +50,7 @@ function Cart(props) {
         <div className="flex flex-row items-center gap-1">
           <img src={"./public/images/calendar.svg"} className="w-6 h-6" />
           <p className="max-w-[213px] w-full text-neutral-700 text-14 font-medium">
-            {formatDate(dateProps)}  
+            {formatDate(dateProps)}
           </p>
         </div>
 
